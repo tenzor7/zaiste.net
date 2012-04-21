@@ -13,11 +13,7 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
-compile '/normalize/' do
-  # don’t filter or layout
-end
-
-compile '/stylesheet/' do
+compile '/stylesheets/*/' do
   # don’t filter or layout
 end
 
@@ -30,7 +26,7 @@ compile '/flux/' do
 end
 
 compile '/blog/*/' do
-  filter :rdiscount, extensions: %w(strict smart)
+  filter :redcarpet, options: { tables: true } 
   layout 'post'
   layout 'default'
 end
@@ -42,7 +38,7 @@ compile '*' do
     # don’t filter binary items
   elsif ext == 'md' || ext == 'markdown'
     filter :erb
-    filter :rdiscount
+    filter :redcarpet
     layout 'default'
   else
     filter :haml
@@ -50,12 +46,8 @@ compile '*' do
   end
 end
 
-route '/normalize/' do
-  '/normalize.css'
-end
-
-route '/stylesheet/' do
-  '/style.css'
+route '/stylesheets/*/' do
+  item.identifier.chop + '.css' 
 end
 
 route '/images/*/' do
