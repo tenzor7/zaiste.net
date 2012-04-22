@@ -176,6 +176,10 @@ h4 small {
 }
 #affairz .image.empty { border: 1px dashed #CECECE }
 #affairz p { font-size: 0.9em }
+
+ul#affairz {
+    list-style: none;
+}
 #affairz li {
     margin-bottom: 32px;
     border-bottom: 1px dashed #787878;
@@ -283,4 +287,17 @@ strong {
 .meta p {
     line-height: 1.3em;
     font-size: 0.9em;
+}
+
+code {
+    font-size: 0.9em;
+    font-family: 'Monaco', Courier, monotype;
+    padding-left: 4px;
+    padding-right: 4px;
+    color: grey;
+}
+
+.art h2 {
+  margin-top: 24px;
+  margin-bottom: 24px;
 }

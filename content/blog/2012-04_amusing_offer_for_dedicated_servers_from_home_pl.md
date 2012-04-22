@@ -80,4 +80,4 @@ All prices are brut (VAT in PL is 23%, in DE is 19%).
 (1) after [CPU Benchmark](http://www.cpubenchmark.net/high_end_cpus.html)
 (2) with [Home.pl](http://home.pl) you must sign up for a contract (fee for 1-3 months)
 
-[Home.pl](http://home.pl) proposed pretty amusing price for the setup. It might indicate that they are still a small company (mitigating the provision cost of new hardware). The idea to have a contract only amplifies possible friction of selling process. Monthly fee for their offerings is much higher and their promotion is cumbersome - draw your own conclusions…
+[Home.pl](http://home.pl) proposed pretty amusing price for the setup. It might indicate that they are still a small company (mitigating the provision cost of new hardware). The idea to have a contract only amplifies possible friction of selling process. Monthly fee for their offerings is much higher and their promotion is cumbersome. Draw your own conclusions, but to me, it's clear that guys at Home.pl just missed the point with such offering... 
