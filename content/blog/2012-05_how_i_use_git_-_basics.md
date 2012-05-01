@@ -1,5 +1,5 @@
 ---
-created_at: 2012-05-01 11:50:36 +0200
+created_at: 2012-05-01 
 kind: article
 publish: true
 title: "How I Use Git - Basics"
