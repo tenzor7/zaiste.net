@@ -1,91 +1,3 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
 
 body {
     margin: 12px;
@@ -122,13 +34,6 @@ p strong {
     width: 738px;
 }
 label .content { margin-left: 0 }
-h1 {
-    display: inline;
-    position: relative;
-    font: 48px Helvetica, Sans-Serif;
-    letter-spacing: 1px;
-    color: rgba(0,0,0,0.5);
-}
 h1:first-child,
 h2:first-child,
 h3:first-child,
@@ -137,14 +42,13 @@ h1 {
     font-family: HelveticaNeue,Helvetica,Arial;
     font-weight: bold;
 }
-h1,
-#header h2 {
-    color: #BCBDAC;
-    text-shadow: 0px 2px 3px #555;
-}
 h1.lambda { color: #CCCC99 }
 h1.title { color: #7890F0 }
 h1.projects { color: #FC9D9A }
+.art h1 {
+    color: #474747; 
+    margin-bottom: 12px;
+}
 h2 {
     color: #4D4D49;
     font-family: 'Varela', "Lucida Grande", Verdana, Arial, sans-serif;
@@ -198,7 +102,7 @@ ul#affairz {
 #affairz .stack li { margin: 0 }
 .rabbit-hole a { text-decoration: none }
 ul, ol, p {
-    font-size: 1.1em;
+    font-size: 1.2em;
     line-height: 1.5em;
     color: #565656;
     font-family: "Lucida Grande", Verdana, Arial, sans-serif;
@@ -238,6 +142,8 @@ strong {
     font-size: 1em;
     font-family: 'Monaco', Courier, monotype;
 }
+#realm {
+}
 #realm h1 {
     margin-bottom: 36px;
     display: block;
@@ -250,11 +156,17 @@ strong {
 #flux ul {
     list-style: none;
 }
+
+#flux h2 {
+    margin-bottom: 0; 
+}
 #flux a {
     text-decoration: none;
     color: #4D4D49;
 }
 #flux a:hover { background-color: #E1E1E1 }
+
+
 #header {
     position: fixed;
     right: 15px;
@@ -267,7 +179,9 @@ strong {
 #header #nav {
     list-style: none;
 }
-#header #nav li { margin-bottom: 16px }
+#header #nav li { 
+    margin-bottom: 16px 
+}
 #header #nav li a {
     padding: 4px;
     padding-top: 5px;
@@ -276,19 +190,15 @@ strong {
     font-weight: bold;
     font-size: 24px;
     text-decoration: none;
+    line-height: 1em;
 }
 .meta em { font-style: italic }
 .meta h2 {
     border-bottom: 1px solid #6A6A6A;
-    padding-bottom: 8px;
-    margin-bottom: 16px;
+    padding-bottom: 0;
+    margin-bottom: 0; 
     margin-top: 24px;
 }
-.meta p {
-    line-height: 1.3em;
-    font-size: 0.9em;
-}
-
 code {
     font-size: 0.9em;
     font-family: 'Monaco', Courier, monotype;
@@ -299,5 +209,4 @@ code {
 
 .art h2 {
   margin-top: 24px;
-  margin-bottom: 24px;
 }
