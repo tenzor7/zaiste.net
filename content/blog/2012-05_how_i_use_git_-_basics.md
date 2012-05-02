@@ -9,7 +9,7 @@ title: "How I Use Git - Basics"
 
 In a series of posts I will try to present my current workflow with Git. I hope you will find it useful.
 
-If you are new to Git, don’t forget to check [Scott Chacon’s](http://scottchacon.com/) [« Why Git is better than X »](whygitisbetterthanx.com/) to see how it compares to other tools.
+If you are new to Git, don’t forget to check [Scott Chacon’s](http://scottchacon.com/) [« Why Git is better than X »](http://whygitisbetterthanx.com/) to see how it compares to other tools.
 
 
 Code Collaboration
@@ -49,7 +49,7 @@ Once finished, Alban sends back the changes to his fork by pushing a particular 
 
 He can now send a pull request via GitHub website from the remote branch he just pushed to.
 
-Every pull request sent to the central repository is merged using GitHub website as I haven't found yet any convenient (and API v3 compatible) way to list pending pull requests on the command line.
+Every pull request sent to the central repository is merged using GitHub website as I haven't found yet any convenient (and API v3 compatible) way to list pull requests on the command line.
 
 When I want to test some changes without merging, I simply fetch them from that person
 
