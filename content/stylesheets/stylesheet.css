@@ -204,12 +204,34 @@ strong {
     margin-top: 24px;
 }
 code {
-    font-size: 0.9em;
-    font-family: 'Monaco', Courier, monotype;
-    padding-left: 4px;
-    padding-right: 4px;
-    color: grey;
+    font-size: 1em;
+    font-family: 'Menlo', Courier, monotype;
+    padding:2px 4px;
+    color:#373737;
+    background-color:#f7f7f9;
+    border:1px solid #e1e1e8;
+    overflow: hidden;
 }
+
+pre{
+    display:block;
+    font-family: 'Menlo', Courier, monotype;
+    padding:12px;
+    margin:0 0 9px;
+    font-size:1em;
+    line-height:18px;
+    background: none repeat scroll 0% 0% rgb(39, 40, 34);
+    /* background-color:#f5f5f5; */
+    border:1px solid #ccc;
+}
+pre code{
+    padding:0;
+    font-family: 'Menlo', Courier, monotype;
+    font-size: 14px;
+    color:#EFEFEF;
+    background-color:transparent;
+    border:0;
+}¬
 
 .art h2 {
   margin-top: 24px;
