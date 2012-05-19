@@ -1,0 +1,38 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    adsf (1.1.1)
+      rack (>= 1.0.0)
+    blankslate (2.1.2.4)
+    builder (3.0.0)
+    cri (2.2.1)
+    ffi (1.0.11)
+    haml (3.1.4)
+    maruku (0.6.0)
+      syntax (>= 1.0.0)
+    mime-types (1.18)
+    nanoc (3.3.6)
+      cri (~> 2.2)
+    nokogiri (1.5.2)
+    pygments.rb (0.2.12)
+      rubypython (~> 0.5.3)
+    rack (1.4.1)
+    redcarpet (2.1.1)
+    rubypython (0.5.3)
+      blankslate (>= 2.1.2.3)
+      ffi (~> 1.0.7)
+    syntax (1.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  adsf
+  builder
+  haml
+  maruku
+  mime-types
+  nanoc
+  nokogiri
+  pygments.rb
+  redcarpet
