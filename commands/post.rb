@@ -15,7 +15,7 @@ run do |opts, args, cmd|
   date = Time.now
   #strftime("%Y_%m") 
   
-  filename, path = calc_path(title, date)
+  filename, path = calc_path(title.downcase, date)
 
   template = <<TEMPLATE
 ---
@@ -33,7 +33,7 @@ TEMPLATE
 end
 
 def calc_path(title, date)
-  filename = "#{date.strftime('%Y-%m')}_#{title.split.join('_')}.md"
+  filename = "#{date.strftime('%Y-%m')}_#{title.gsub(/[,.-]/, " ").split.join('_')}.md"
   path = "content/blog/#{filename}"
   [filename, path]
 end
