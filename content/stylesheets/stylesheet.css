@@ -107,6 +107,11 @@ ul, ol, p {
     font-family: "Lucida Grande", Verdana, Arial, sans-serif;
     margin-bottom: 12px;
 }
+
+ul li {
+    line-height: 1.6em;
+}
+
 table {
     font-size: 0.9em;
     line-height: 1.2em;
