@@ -16,6 +16,10 @@
 compile 'sitemap' do
   filter :haml
 end
+
+compile 'google9c299847c27f1f1a' do
+end
+
 compile '/stylesheets/*/' do
   ext = item[:extension].nil? ? nil : item[:extension].split('.').last
 
@@ -53,6 +57,10 @@ compile '*' do
     filter :haml
     layout 'default'
   end
+end
+
+route 'google9c299847c27f1f1a' do
+  item.identifier.chop + '.html'
 end
 
 route 'sitemap' do
