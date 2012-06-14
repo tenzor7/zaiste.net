@@ -8,10 +8,9 @@ gem 'systemu'
 # Code Highlight 
 gem 'pygments.rb'
 
-gem 'haml'
-gem 'maruku'
-gem 'nokogiri'
 gem 'redcarpet'
+gem 'haml', '~> 3.2.0.alpha.13' 
+gem 'nokogiri'
 
 # XML Sitemap 
 gem 'builder'
