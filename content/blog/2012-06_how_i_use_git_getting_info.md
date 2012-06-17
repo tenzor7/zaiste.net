@@ -5,21 +5,21 @@ publish: true
 title: "How I use Git - Extracting Info"
 ---
 
-In 2nd post of the series I'll show how I extract information from a Git repository. There are three layers I will operate on:
+In the 2nd post of the series I'll show how I extract information from a Git repository. There are three layers I will operate on:
 
- 1. highlighting output to draw the attention to particular piece of information on the screen
- 2. formatting log message  
+ 1. highlighting output to draw the attention on a particular piece of information on the screen
+ 2. formatting a log message  
  3. searching through commit messages or through the codebase
 
-For the purpose of this article I will two Git repositories: 
+For the purpose of this article I will use two Git repositories: 
 
- 1. a small personal project which has some changes in both working directory and staged, 
+ 1. a small personal project which has some changes in both the working directory and the staged files, 
  1. [Noir framework](http://webnoir.org/) repository from [GitHub](https://github.com/ibdknox/noir)
 
 ## git status 
 
 Let’s start by putting some colours on `git status`. We have to modify
-`~/.gitconfig` by adding following part, and if needed adjusting colors.
+`~/.gitconfig` and add the following part:
 
 ```
 [color "status"]
@@ -32,19 +32,19 @@ Let’s start by putting some colours on `git status`. We have to modify
 λ git status
 ```
 
-After executing this command we will get some nice coloring, like shown in the
+Now, `git status` will get some nice coloring, like on the
 screen below:
 
 ![git status](/assets/images/git-status.jpg)
 
-Now, let’s remove unnecessary information from `git status` by adding `--short`
+Let’s remove unnecessary information from `git status` by adding the `--short`
 option. I use it pretty often so I have binded it to `git s` for convenience.
 
 ```
 λ git status --short
 ```
 
-As shown below there is only essential status information
+As shown below there is only the essential status information
 
 ![git status short](/assets/images/git-status-short.jpg)
 
@@ -65,7 +65,7 @@ Now `git diff` will render an output similiar to the one below
 
 ![git diff](/assets/images/git-diff.jpg)
 
-There is an useful option called `--stat` which provides a summary for each file 
+There is a useful option called `--stat` which provides a summary for each file 
 from `git diff`. It can be used for staged files as well.
 
 ```
@@ -78,7 +78,7 @@ from `git diff`. It can be used for staged files as well.
 
 ## git log
 
-`git log` shows commit logs. 
+`git log` shows the commit logs. 
 
 ```
 λ git log
@@ -129,7 +129,7 @@ Let's create a more concise `git log` output using the following format.
 ```
 λ git log --pretty=format:'[%h] %an %cr: %s'
 ```
-I have created a `git los` alias for that format.
+I have binded it to `git los` alias.
 
 ![git short](/assets/images/git-short.jpg)
 
@@ -141,19 +141,19 @@ could be done this way:
 ```
 λ git log --pretty=format:'[%h] %an %cr: %s' --name-status
 ```
-I have created a `git changes` alias for that format.
+I have binded it to `git changes` alias.
 
 ![git changes](/assets/images/git-changes.jpg)
 
 ### Log Format: Summary
 
 We can go even further and adjust the previous output with a `git diff` stats
-that visually show how a file associated with each commit changed
+that visually show how a file or files associated with each commit changed
 
 ```
 λ git log --pretty=format:'[%h] %an %ar: %s' --stat
 ```
-I have created a `git summary` alias for that format.
+I have binded it to `git summary` alias.
 
 ![git summary](/assets/images/git-summary.jpg)
 
@@ -164,13 +164,13 @@ We can also generate a simple change log (aliased to `git changelog`) by using:
 ```
 λ git log --pretty=format:' * %s'
 ```
-I've added `git changelog` alias for that format in my `~/.gitconfig`.
+As before I have `git changelog` alias for that format in my `~/.gitconfig`.
 
 ![git changelog](/assets/images/git-changelog.jpg)
 
 ### Log Format: Full Graph
 
-Or a neat graph which is aliased in my personal config to `git lof`.
+Or a neat graph which is binded to `git lof` in my personal config.
 
 ```
 λ git log --graph --pretty=format:'[%h] -%d %an %cr: %s' --abbrev-commit --date=relative
@@ -185,7 +185,7 @@ Or a neat graph which is aliased in my personal config to `git lof`.
 
 ### Time Range
 
-Time range can be specified via `--since` or `--before` options:
+Time range can be specified using `--since` or `--before` options:
 
 ```
 λ git log --since=2.weeks
@@ -218,7 +218,7 @@ to look for an author OR a message, but it does AND instead; as a result `--all-
 ## Code Filtering 
 
 At this point, we already know how to look through commit messages, find commits
-authored by a specific person, etc. Let's learn how to search the source
+authored by a specific person, etc. Let's learn how to search in the source
 code.
 
 The simplest command looks like this: 
@@ -227,7 +227,7 @@ The simplest command looks like this:
 λ git grep <regexp>
 ```
 
-It searches for a specifc `regex` expression in the working tree. There is an
+It searches for a specifc `regex` expression in the working tree. There is a
 useful option, called `--function-context` which gives a « context » for the
 search. Let's compare:
 
@@ -242,13 +242,13 @@ search. Let's compare:
 For a more clear `git grep` output with filename heading & line numbers, I use 
 three additional options: `--break`, `--heading` and `--line-number`.
 
-To search in the current head, use following:
+To search in the current head, use the following command:
 
 ```
 λ git grep <regex> HEAD
 ```
 
-To search only through `.md` files, in the working directory, use following:
+To search only through `.md` files, in the working directory, try this:
 
 ```
 λ git grep 'map' -- '*.md'
@@ -295,6 +295,8 @@ Finally, the following command will give the names of the _files_ that have both
 ```
 λ git grep -l --all-match -e defn -e init 
 ```
+
+## Summary 
 
 In this article, I only scratched the surface. There is much more options for `git diff`, `git status`, `git log` and `git grep` commands. You can get more details on each of these commands via `git help <command>`. 
 
