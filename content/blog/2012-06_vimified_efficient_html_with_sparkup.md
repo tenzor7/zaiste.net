@@ -1,5 +1,5 @@
 ---
-created_at: 2012-06-22 19:05:46 +0200
+created_at: 2012-06-17 
 kind: article
 publish: true
 title: "Vimified? efficient HTML with sparkup"
