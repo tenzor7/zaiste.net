@@ -120,6 +120,7 @@ ul, ol, p {
 
 ul li {
     line-height: 1.6em;
+    margin-left: 6px;
 }
 
 table {
@@ -183,7 +184,6 @@ strong {
     position: fixed;
     right: 15px;
     top: 50px;
-    width: 150px;
     font-family: Helvetica, sans-serif;
     margin: 15px -10px 0 0;
     text-align: right;
