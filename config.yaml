@@ -83,6 +83,6 @@ ganalytics:
   site_id: UA-20458791-1 
 
 deploy:
-  public:
+  default:
     kind: rsync
     dst:  "nukomeet:/srv/www/zaiste.net/public_html"
