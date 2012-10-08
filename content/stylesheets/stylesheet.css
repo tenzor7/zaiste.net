@@ -7,7 +7,6 @@ ol, ul {
     margin: auto;
     list-style-position:inside;
 }
-em { font-style: italic }
 a {
     color: #E6324B;
     text-decoration: none;
