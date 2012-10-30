@@ -3,6 +3,9 @@
 
 require 'pygments.rb'
 
+require 'yaml'
+YAML::ENGINE.yamler = 'syck'
+
 include Nanoc3::Helpers::LinkTo
 include Nanoc3::Helpers::Blogging
 include Nanoc3::Helpers::Rendering
