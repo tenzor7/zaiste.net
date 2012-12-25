@@ -1,0 +1,7 @@
+#realm
+  #flux
+    ul
+      - @site.sorted_articles.each do |post|
+        li
+          h2== link_to(post[:title], post.path)
+          .at= post[:created_at]
