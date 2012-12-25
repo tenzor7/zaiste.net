@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    meta http-equiv="content-type" content="text/html; charset=utf-8"
+    title
+      = @item[:title]
+      | zaiste.net
+
+    meta name="author" content="Zaiste"
+    meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
+
+    link href="/stylesheets/bootstrap.css" media="screen" rel="stylesheet" type="text/css"
+    link href="/stylesheets/stylesheet.css" media="screen" rel="stylesheet" type="text/css"
+    link href="/stylesheets/code.css" media="screen" rel="stylesheet" type="text/css"
+    link href="http://fonts.googleapis.com/css?family=Varela" rel="stylesheet" type="text/css"
+
+    link rel="apple-touch-icon" href="/apple-touch-icon.png"
+    link href="atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed"
+  body
+    #header
+      ul#nav
+        li == link_to '&nbsp; λ .', '/flux/'
+        li == link_to '&nbsp; AFFAIR\'Z .', '/affairz/'
+        li == link_to '&nbsp; ME .', '/'
+    .content
+      == yield
+
+    == render('_ganalytics')
