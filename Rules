@@ -36,6 +36,10 @@ compile '/flux/' do
   layout 'default'
 end
 
+compile '/feed' do
+  filter :slim
+end
+
 compile '/blog/*/' do
   filter :redcarpet, options: { tables: true, fenced_code_blocks: true } 
   filter :colorize_syntax, 
@@ -73,6 +77,10 @@ end
 
 route '/images/*/' do
   '/assets' + item.identifier.chop + '.jpg'
+end
+
+route '/feed/' do
+  '/atom.xml'
 end
 
 route '/blog/*/' do
