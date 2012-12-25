@@ -47,19 +47,24 @@ h1 {
 h1.lambda { color: #CCCC99 }
 h1.title { color: #7890F0 }
 h1.projects { color: #FC9D9A }
+
 .art h1 {
-    color: #474747; 
-    margin-bottom: 12px;
+    color: #474747;
+    margin-bottom: 30px;
+    border-top: 1px solid #C9C9C9;
+    border-bottom: 1px solid #C9C9C9;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 16px;
 }
 h2 {
     color: #1D1D19;
-    font-family: 'Varela', "Lucida Grande", Verdana, Arial, sans-serif;
     text-transform: uppercase;
-    font-size: 1.4em;
+    font-size: 1em;
     font-weight: bold;
-    margin-bottom: 6px;
-    margin-top: 24px;
-    border-top: 1px solid #6A6A6A;
+    margin-bottom: 12px;
+    margin-top: 30px;
+    border-bottom: 1px solid #C9C9C9;
 }
 h3 {
     margin-top: 6px;
@@ -146,11 +151,6 @@ strong {
     color: #898989;
     border-bottom: 1px solid #686868;
 }
-#me {
-    line-height: 1.7em;
-    margin-top: 12px;
-    font-size: 2em;
-}
 .gist .gist-file { margin-bottom: 0 !important }
 .gist .gist-meta { display: none }
 .gist .gist-highlight { border-left: 10px solid #545454 }
@@ -161,12 +161,21 @@ strong {
 #realm {
 }
 #realm h1 {
-    margin-bottom: 36px;
     display: block;
+    border-top: 1px solid #C9C9C9;
+    border-bottom: 1px solid #C9C9C9;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+
+    line-height: 1.7em;
+    margin-top: 12px;
+    font-size: 2em;
 }
 #realm em {
     font-family: "Lucida Grande", Verdana, Arial, sans-serif;
-    font-size: 1em; 
+    font-size: 1em;
     color: #888;
     font-style: normal;
 }
@@ -175,7 +184,7 @@ strong {
 }
 
 #flux h2 {
-    margin-bottom: 0; 
+    margin-bottom: 0;
 }
 #flux a {
     text-decoration: none;
@@ -195,8 +204,8 @@ strong {
 #header #nav {
     list-style: none;
 }
-#header #nav li { 
-    margin-bottom: 16px 
+#header #nav li {
+    margin-bottom: 16px
 }
 #header #nav li a {
     padding: 4px;
@@ -211,7 +220,7 @@ strong {
 .meta em { font-style: italic }
 .meta h2 {
     padding-bottom: 0;
-    margin-bottom: 0; 
+    margin-bottom: 0;
     margin-top: 24px;
 }
 code {
@@ -228,7 +237,7 @@ pre{
     display:block;
     font-family: 'Menlo', Courier, monotype;
     padding:12px;
-    margin:0 0 9px;
+    margin:0 0 30px;
     font-size:1em;
     line-height:18px;
     background: none repeat scroll 0% 0% rgb(39, 40, 34);
