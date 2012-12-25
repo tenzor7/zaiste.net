@@ -14,7 +14,7 @@
 #   because “*” matches zero or more characters.
 
 compile 'sitemap' do
-  filter :haml
+  filter :slim
 end
 
 compile 'google9c299847c27f1f1a' do
@@ -32,7 +32,7 @@ compile '/images/*/' do
 end
 
 compile '/flux/' do
-  filter :haml
+  filter :slim
   layout 'default'
 end
 
@@ -41,8 +41,8 @@ compile '/feed' do
 end
 
 compile '/blog/*/' do
-  filter :redcarpet, options: { tables: true, fenced_code_blocks: true } 
-  filter :colorize_syntax, 
+  filter :redcarpet, options: { tables: true, fenced_code_blocks: true }
+  filter :colorize_syntax,
       default_colorizer: :pygmentsrb
   layout 'post'
   layout 'default'
@@ -58,21 +58,21 @@ compile '*' do
     filter :redcarpet
     layout 'default'
   else
-    filter :haml
+    filter :slim
     layout 'default'
   end
 end
 
-route 'google9c299847c27f1f1a' do
+route '/google9c299847c27f1f1a' do
   item.identifier.chop + '.html'
 end
 
-route 'sitemap' do
+route '/sitemap' do
   item.identifier.chop + '.xml'
 end
 
 route '/stylesheets/*/' do
-  item.identifier.chop + '.css' 
+  item.identifier.chop + '.css'
 end
 
 route '/images/*/' do
@@ -86,8 +86,9 @@ end
 route '/blog/*/' do
   item.identifier.gsub(%r{^/blog/(\d+)-(\d+)_(.*)$}) do |match|
     "/#{$1}/#{$2}/#{$3}" + 'index.html'
-  end 
+  end
 end
+
 
 route '*' do
   if item.binary?
@@ -99,4 +100,4 @@ route '*' do
   end
 end
 
-layout '*', :haml, format: :html5
+layout '*', :slim

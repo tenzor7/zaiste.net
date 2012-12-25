@@ -7,16 +7,15 @@ gem 'systemu'
 gem 'rdiscount'
 gem 'fssm'
 
-# Code Highlight 
 gem 'pygments.rb'
 
 gem 'redcarpet'
-gem 'haml', '~> 3.2.0.alpha.13' 
+gem 'slim'
 gem 'nokogiri'
 gem 'less'
 gem 'therubyracer'
 
-# XML Sitemap 
+# XML Sitemap
 gem 'builder'
 
 gem 'nanoc'
