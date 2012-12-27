@@ -160,7 +160,7 @@ strong {
 }
 #realm {
 }
-#realm h1 {
+#realm h1, #about h1 {
     display: block;
     border-top: 1px solid #C9C9C9;
     border-bottom: 1px solid #C9C9C9;
@@ -255,4 +255,19 @@ pre code{
 
 .art h2 {
   margin-top: 24px;
+}
+
+.lead {
+  font-size: 24px;
+  color: #898989;
+  margin-bottom: 30px;
+}
+
+small p {
+  font-size: 14px;
+}
+
+hr {
+  border-top: 1px solid #C9C9C9;
+  border-bottom: 1px solid #C9C9C9;
 }
