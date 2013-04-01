@@ -3,6 +3,13 @@ created_at: 2012-11-09
 kind: article
 publish: true
 title: "RESTful API with Express, Mongoose on CoffeeScript"
+tags:
+- api
+- nodejs
+- rest
+- express
+- mongoose
+- coffeescript
 ---
 
 In this post I will show you how to build a basic RESTful API using [Express][2], a popular [NodeJS][1] framework. I will use [MongoDB][5] for storage with [Mongoose ODM][3]. The application will be written in [CoffeeScript][8] and it will be compatible with Heroku.

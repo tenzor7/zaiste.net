@@ -1,29 +1,33 @@
 ---
-created_at: 2012-08-01 
+created_at: 2012-08-01
 kind: article
 publish: true
 title: "Fast way to install Node.js on Linux and OSX"
+tags:
+- nodejs
+- osx
+- linux
 ---
 
 The fastest way I know to install [Node.js](http://nodejs.org/) on `*nix` systems is by using [Node
 Version Manager](https://github.com/creationix/nvm). This script
 helps you as well easily manage multiple [Node.js](http://nodejs.org/) versions.
 
-## Dependencies 
+## Dependencies
 
 For Ubuntu/Debian, install following packages:
 
 ```
 apt-get install libssl-dev git-core pkg-config build-essential curl gcc g++
-checkinstall 
+checkinstall
 ```
 
 For OSX, you must have XCode installed.
 
-## NVM 
+## NVM
 
 Clone NVM repository to your home directory and activate it by sourcing the
-script. 
+script.
 
 ```
 git clone git://github.com/creationix/nvm.git ~/nvm

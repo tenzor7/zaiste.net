@@ -3,6 +3,8 @@ created_at: 2012-08-18
 kind: article
 publish: true
 title: "Clojure App 101"
+tags:
+- clojure
 ---
 
 If you are new to [Clojure][1], this post will quickly get you started.  You will create a

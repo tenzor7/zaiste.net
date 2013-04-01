@@ -3,6 +3,9 @@ created_at: 2012-09-10
 publish: true
 kind: article
 title: "Command Line - Resizing Images"
+tags:
+- cli
+- image
 ---
 
 If you're looking for an efficient way to resize images, especially

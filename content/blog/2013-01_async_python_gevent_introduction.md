@@ -3,6 +3,10 @@ created_at: 2013-01-07
 kind: article
 publish: true
 title: "Async Python - Short Gevent Introduction"
+tags:
+- python
+- async
+- gevent
 ---
 
 Python provides a variety of methods to handle asynchronous programming. One of them is a [Gevent][1], a concurrency library which provides *greenlets* a thread-like abstraction. Greenlets wrap up an event loop and allow an asynchronous code execution.

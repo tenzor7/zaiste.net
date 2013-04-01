@@ -3,6 +3,10 @@ created_at: 2012-09-03
 kind: article
 publish: true
 title: "Creating XML with Clojure"
+tags:
+- clojure
+- xml
+- lisp
 ---
 
 In this post I show how to easily create a XML file in [Clojure][1]. We will use [`clojure.data.xml`][2] library. It can transform XML documents directly into and from Clojure data structures. The library is *lazy* which in practice means that it can operate on large XML documents, i.e. files that don't fit into memory.

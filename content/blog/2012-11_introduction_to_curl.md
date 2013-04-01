@@ -3,6 +3,10 @@ created_at: 2012-11-10
 kind: article
 publish: true
 title: "Introduction to cURL"
+tags:
+- curl
+- http
+- cli
 ---
 
 [cURL][1] is a solid and simple tool that allows transferring data from and to any server with command line using various protocols including HTTP. This article is a short introduction on how to use cURL effectively along with some lesser known tricks.

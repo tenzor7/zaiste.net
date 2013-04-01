@@ -3,6 +3,9 @@ created_at: 2012-08-10
 kind: article
 publish: true
 title: "Google Domain Verification with Rails 3.2"
+tags:
+- rails
+- trick
 ---
 
 Google offers domain verification by using a static HTML file with a special code

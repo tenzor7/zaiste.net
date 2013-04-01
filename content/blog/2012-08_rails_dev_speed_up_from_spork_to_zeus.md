@@ -3,6 +3,10 @@ created_at: 2012-08-16
 kind: article
 publish: true
 title: "Rails Dev Speed-Up: From Spork to Zeus"
+tags:
+- rails
+- ruby
+- perf
 ---
 
 ## TL;DR

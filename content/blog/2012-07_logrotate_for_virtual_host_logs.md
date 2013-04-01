@@ -1,8 +1,10 @@
 ---
-created_at: 2012-07-14 
+created_at: 2012-07-14
 kind: article
 publish: true
 title: "logrotate for virtual host logs"
+tags:
+- devops
 ---
 
 In this post I'll explain how to set up log rotation for virutal host logs. This

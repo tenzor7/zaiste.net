@@ -3,6 +3,8 @@ created_at: 2013-01-10
 kind: article
 publish: true
 title: "Abstract Classes in Python"
+tags:
+- python
 ---
 
 Before Python 2.6 there was no explicit way to declare [an abstract class][1]. It changed with the  `abc` ([Abstract Base Class][2]) module from the standard library.

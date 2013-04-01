@@ -3,6 +3,9 @@ created_at: 2012-08-23
 kind: article
 publish: true
 title: "Concisely about Rack applications"
+tags:
+- ruby
+- rack
 ---
 
 [Rack][1] is a modular server interface for Ruby web applications. It unifies the API for web servers, web frameworks and middlewares. This post is a concise introduction to building basic Rack applications along with some useful tricks.

@@ -1,7 +1,10 @@
 ---
 created_at: 2012-07-23
-kind: article 
+kind: article
 title: "Shared DB to Postgres:Dev Migration on Heroku"
+tags:
+- postgresql
+- heroku
 ---
 
 In order to migrate your Shared DB to Postgres:Dev plan on Heroku, follow these
@@ -25,10 +28,10 @@ Database has been created and is available
 
 where `xxxxxx` is an uniq color name e.g. `GREEN`, `VIOLET`, etc.
 
-## Backup the data 
+## Backup the data
 
 ```
-λ heroku pgbackups:capture --expire 
+λ heroku pgbackups:capture --expire
 
 SHARED_DATABASE (DATABASE_URL)  ----backup--->  b002
 Capturing... done
@@ -47,7 +50,7 @@ HEROKU_POSTGRESQL_xxxxxx  <---restore---  b002 (most recent)
 ```
 
 It restores your previous backup on the new database created with Postgres:Dev
-plan. 
+plan.
 
 ## Switch the database
 
@@ -66,4 +69,4 @@ everything is OK with `heroku config`.
 λ heroku maintenance:off
 ```
 
-It's done, your database should be properly migrated. 
+It's done, your database should be properly migrated.

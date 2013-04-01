@@ -3,6 +3,9 @@ created_at: 2012-08-27
 kind: article
 publish: true
 title: "Importing JSON into MongoDB"
+tags:
+- mongodb
+- json
 ---
 
 Importing JSON data into MongoDB can be tricky. By default, `monogoimport`

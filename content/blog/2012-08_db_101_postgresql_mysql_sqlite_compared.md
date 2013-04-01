@@ -1,16 +1,20 @@
 ---
-created_at: 2012-08-06 
-kind: article 
+created_at: 2012-08-06
+kind: article
 title: "DB 101: PostgreSQL, MySQL and SQLite compared"
+tags:
+- postgresql
+- mysql
+- sqlite
 ---
 
-In this post I go through basic adminstrative commands for [PostgreSQL][1], 
-[MySQL][2] and [SQLite][3]. The idea is to organize it in one place as it slips my mind quite 
+In this post I go through basic adminstrative commands for [PostgreSQL][1],
+[MySQL][2] and [SQLite][3]. The idea is to organize it in one place as it slips my mind quite
 often. In square brackets I'm putting optional parameters. For Linux I assume
 a root access.
 
 
-Installing 
+Installing
 ----------
 
 ### PostgreSQL
@@ -49,7 +53,7 @@ Accessing a DB server
 
 ```
 λ su - postgres
-λ psql dbname 
+λ psql dbname
 ```
 
 ### MySQL
@@ -67,7 +71,7 @@ Creating a DB user
 On OSX
 
 ```
-λ createuser zaiste 
+λ createuser zaiste
 Shall the new role be a superuser? (y/n) n
 Shall the new role be allowed to create databases? (y/n) y
 Shall the new role be allowed to create more new roles? (y/n) n
@@ -76,7 +80,7 @@ Shall the new role be allowed to create more new roles? (y/n) n
 On Linux
 
 ```
-λ sudo -u postgres createuser zaiste 
+λ sudo -u postgres createuser zaiste
 Shall the new role be a superuser? (y/n) n
 Shall the new role be allowed to create databases? (y/n) y
 Shall the new role be allowed to create more new roles? (y/n) n
@@ -104,7 +108,7 @@ Creating a database
 On CLI
 
 ```
-λ createdb realm -O zaiste 
+λ createdb realm -O zaiste
 ```
 
 With `psql`
@@ -132,10 +136,10 @@ On specific IP
 mysql> GRANT ALL ON realm.* TO zaiste@192.168.1.5 [identified by 'pass'];
 ```
 
- 
+
 ### SQLite
 
-In SQLite3 there is no database server. Databases are just regular files. If the 
+In SQLite3 there is no database server. Databases are just regular files. If the
 file doesn't exist, it will be created once you launch the `sqlite` client.
 
 ```
@@ -151,7 +155,7 @@ Check Version
 =# select version();
                                   version
 ------------------------------------------------------------------------------
- PostgreSQL 9.2.0 on x86_64-apple-darwin12.1.0, compiled by Apple clang version 
+ PostgreSQL 9.2.0 on x86_64-apple-darwin12.1.0, compiled by Apple clang version
     4.0 (tags/Apple/clang-421.0.57) (based on LLVM 3.1svn), 64-bit
 ```
 
@@ -160,7 +164,7 @@ Check Version
 More details:
 
 ```
-λ mysqladmin -u root -p -h localhost version 
+λ mysqladmin -u root -p -h localhost version
 Enter password:
 mysqladmin  Ver 8.42 Distrib 5.1.61, for debian-linux-gnu on x86_64
 Copyright (c) 2000, 2011, Oracle and/or its affiliates. All rights reserved.
@@ -175,14 +179,14 @@ Connection              Localhost via UNIX socket
 UNIX socket             /var/run/mysqld/mysqld.sock
 Uptime:                 77 days 12 hours 15 min 42 sec
 
-Threads: 1  Questions: 70715217  Slow queries: 2  Opens: 40905  Flush tables: 1  
+Threads: 1  Questions: 70715217  Slow queries: 2  Opens: 40905  Flush tables: 1
    Open tables: 64  Queries per second avg: 10.559
 ```
 
 Less details:
 
 ```
-λ  mysql -V 
+λ  mysql -V
 mysql  Ver 14.14 Distrib 5.1.61, for debian-linux-gnu (x86_64) using readline 6.2
 ```
 
@@ -204,7 +208,7 @@ Importing
 λ mysql -u zaiste -p -h localhost dbname < dumpfile.sql
 ```
 
-Listing Databases 
+Listing Databases
 -----------------
 
 ### PostgreSQL
@@ -212,14 +216,14 @@ Listing Databases
 ```
 =# \l[ist]
                              List of databases
-   Name     | Owner  | Encoding |   Collate   |    Ctype    | Access privileges 
+   Name     | Owner  | Encoding |   Collate   |    Ctype    | Access privileges
 ------------+--------+----------+-------------+-------------+-------------------
- postgres   | zaiste | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ postgres   | zaiste | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
  template0  | zaiste | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/zaiste        +
             |        |          |             |             | zaiste=CTc/zaiste
  template1  | zaiste | UTF8     | en_US.UTF-8 | en_US.UTF-8 | =c/zaiste        +
             |        |          |             |             | zaiste=CTc/zaiste
- realm      | zaiste | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ realm      | zaiste | UTF8     | en_US.UTF-8 | en_US.UTF-8 |
 ```
 
 ### MySQL
@@ -244,7 +248,7 @@ mysql> show databases;
 .databases
 ```
 
-Switch database 
+Switch database
 ----------------
 
 ### PostgreSQL
@@ -270,7 +274,7 @@ Showing tables
 ```
 realm=# \d[t]
             List of relations
- Schema |       Name        | Type     | Owner  
+ Schema |       Name        | Type     | Owner
 --------+-------------------+----------+--------
  public | table1            | table    | zaiste
  public | table1_id_seq     | sequence | zaiste
@@ -310,8 +314,8 @@ Showing schema
  Column|    Type                |                  Modifiers
 -------+------------------------+----------------------------------------------------
  id    | integer                | not null default nextval('table1_id_seq'::regclass)
- name  | character varying(255) | 
- title | character varying(255) | 
+ name  | character varying(255) |
+ title | character varying(255) |
 ```
 
 
