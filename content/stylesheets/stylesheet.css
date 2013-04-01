@@ -33,7 +33,7 @@ p strong {
     margin-left: 18px;
     display: block;
     float: left;
-    width: 738px;
+    width: 920px;
 }
 label .content { margin-left: 0 }
 h1:first-child,
@@ -47,6 +47,35 @@ h1 {
 h1.lambda { color: #CCCC99 }
 h1.title { color: #7890F0 }
 h1.projects { color: #FC9D9A }
+
+.art {
+  float: left;
+  width: 738px;
+}
+
+.sidebar {
+  float: left;
+  margin-left: 12px;
+  width: 170px;
+}
+
+.tags {
+  width: 170px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+}
+
+.tags li {
+  background-color: #EAEAEA;
+  margin-bottom: 2px;
+  padding: 2px;
+  text-transform: uppercase;
+  padding-left: 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
 
 .art h1 {
     color: #474747;
@@ -71,7 +100,7 @@ h3 {
     font-family: "Lucida Grande", Verdana, Arial, sans-serif;
     margin-bottom: 6px;
     text-transform: uppercase;
-    font-size: 1.2em;
+    font-size: 11px;
     font-weight: bold;
 }
 h4 {

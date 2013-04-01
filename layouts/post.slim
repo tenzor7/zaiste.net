@@ -22,3 +22,7 @@
       | comments powered by
       span.logo-disqus Disqus
 
+.sidebar
+  ul.tags
+    - (@item[:tags] || []).each do |t|
+      li= t
