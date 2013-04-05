@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 gem 'adsf'
 gem 'mime-types'
 gem 'systemu'
-gem 'rdiscount'
 gem 'fssm'
 
 gem 'pygments.rb'
