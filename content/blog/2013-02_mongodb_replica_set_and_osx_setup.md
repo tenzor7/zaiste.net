@@ -13,7 +13,7 @@ names) that consists of at least two mongod instances that replicate data
 amongst one another. Such setup increases redundancy and ensures high
 availability of the database. It may also improve its read capacity.
 
-# Concepts
+## Concepts
 
 In a replica set there is always only one primary mongod instance that is used
 to manage write operations. Secondary instances are only readable and
@@ -34,7 +34,7 @@ allows gradual propagation of changes we say that read operations to a primary
 have *strict consistency*, while read operations to secondaries have *eventual
 consistency*.
 
-# Development Setup
+## Development Setup
 
 Setting up a replica set on OSX is pretty straightforward. I assume that
 everything is performed on the localhost with no security nor optimisation taken
