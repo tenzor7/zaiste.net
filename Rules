@@ -26,6 +26,8 @@ compile '/stylesheets/*/' do
   if ext == 'erb'
     filter :erb
   end
+
+  filter :yui_compressor, type: 'css'
 end
 
 compile '/images/*/' do

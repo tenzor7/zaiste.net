@@ -7,6 +7,7 @@ gem 'systemu'
 gem 'fssm'
 
 gem 'pygments.rb'
+gem 'yuicompressor'
 
 gem 'redcarpet'
 gem 'slim'

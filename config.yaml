@@ -78,6 +78,14 @@ watcher:
 
 base_url: http://zaiste.net
 
+debug: false
+
+# Asset Management
+css:
+ - bootstrap
+ - stylesheet
+ - code
+
 ganalytics:
   domain: zaiste.net
   site_id: UA-20458791-1
